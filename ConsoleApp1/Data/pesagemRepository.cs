@@ -18,7 +18,7 @@ public class PesagemRepository
                            VALUES (@peso_tara, @nome_motorista)";
             using (var cmd = new NpgsqlCommand(sql, conn))
             {
-                cmd.Parameters.AddWithValue("peso", pesagem.PesoTara);
+                cmd.Parameters.AddWithValue("peso_tara", pesagem.PesoTara);
                 cmd.Parameters.AddWithValue("nome_morotista", pesagem.NomeMotorista);
                 cmd.ExecuteNonQuery();
             }
