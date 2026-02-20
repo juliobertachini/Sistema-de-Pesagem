@@ -27,7 +27,7 @@ class Program
                     break;
 
                 case 2:
-                    Console.WriteLine("TESTE...");
+                    RegistrarPesagem();
                     break;
 
                 case 0:
@@ -76,6 +76,12 @@ class Program
             Console.WriteLine("Usuário cadastrado com sucesso!");
         }
         //FIM CADASTRO DE USUARIO
+        static void RegistrarPesagem()
+        {
+            Console.WriteLine("\n=== Registrar Pesagem ===");
+            // Lógica para registrar pesagem (a ser implementada)
+            Console.WriteLine("Funcionalidade de pesagem ainda não implementada.");
+        }
     }
 }
 
