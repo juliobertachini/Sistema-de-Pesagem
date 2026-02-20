@@ -14,13 +14,12 @@ public class PesagemRepository
         {
             conn.Open();
             string sql = @"INSERT INTO pesagem 
-                           (peso, data_hora, usuario) 
-                           VALUES (@peso, @data_hora, @usuario)";
+                           (peso, nome_motorista) 
+                           VALUES (@peso_tara, @nome_motorista)";
             using (var cmd = new NpgsqlCommand(sql, conn))
             {
-                cmd.Parameters.AddWithValue("peso", pesagem.Peso);
-                cmd.Parameters.AddWithValue("data_hora", pesagem.DataHora);
-                cmd.Parameters.AddWithValue("usuario", pesagem.Usuario);
+                cmd.Parameters.AddWithValue("peso", pesagem.PesoTara);
+                cmd.Parameters.AddWithValue("nome_morotista", pesagem.NomeMotorista);
                 cmd.ExecuteNonQuery();
             }
         }
