@@ -11,6 +11,13 @@ public class Pesagem
     public double PesoTara { get; set; }
     public double PesoBruto { get; set; }
     public DateTime DataHora { get; set; }
-    public string NomeMotorista { get; set; }    
+    public string NomeMotorista { get; set; }   
+    public int CodMotorista { get; set; }
+    public string PlacaEquipamento { get; set; }
+}
+
+public class VariaveisBalanca
+{  public string IpBalanca { get; set; }
+   public int PortaBalanca { get; set; }
 }
 
